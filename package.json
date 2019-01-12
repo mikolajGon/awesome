@@ -1,0 +1,23 @@
+{
+  "name": "awesome",
+  "version": "1.0.0",
+  "description": "Daftcode recruitment task",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "layout",
+    "design",
+    "HTML5",
+    "SCSS"
+  ],
+  "author": "MikolajGonciarz",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

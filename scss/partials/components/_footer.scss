@@ -1,0 +1,36 @@
+.footer{
+
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__social-link{
+
+    display: block;
+    position: relative;
+    word-spacing: 5px;
+    padding-left: $gutter;
+    color: $font_white;
+    text-transform: uppercase;
+    font-size: $text_mobile_small;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+
+
+    &:visited{
+
+      color: $font_white;
+    }
+  }
+
+  &__social-icon{
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+  }
+}

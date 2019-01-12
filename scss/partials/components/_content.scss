@@ -1,0 +1,51 @@
+.content{
+
+  flex: 6;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2*$gutter;
+
+  &__main-text{
+
+    text-align: center;
+    font-stretch: semi-expanded;
+    font-size: $text_mobile;
+    line-height: 1.35;
+  }
+
+  &__text-bold{
+
+    font-weight: 600;
+  }
+
+  &__support-text{
+
+    font-weight: 600;
+    font-size: $text_mobile_small;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2;
+    text-align: center;
+  }
+
+  &__extra-btn{
+
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $bottom_triangle $bottom_triangle $bottom_triangle;
+    border-color: transparent transparent $white transparent;
+
+    &:after{
+
+      position: absolute;
+      content: '+';
+      color: $font_black;
+      font-family: 'Open Sans' sans-serif;
+      font-size: 1.5*$text_mobile;
+      transform: translateX(-50%);
+    }
+  }
+}

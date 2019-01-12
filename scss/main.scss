@@ -1,0 +1,14 @@
+// main styles
+
+@import './partials/normalize';
+@import './partials/reset';
+
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/container';
+
+// components styles
+
+@import './partials/components/navigation';
+@import './partials/components/footer';
+@import './partials/components/content';

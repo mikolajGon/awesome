@@ -1,0 +1,25 @@
+//breaking points
+
+$breakpoints: (
+  "mobile":   400px,
+  "tablet":   1024px,
+  "desktop":  1440px
+);
+
+$on_top: 1;
+$on_bot: -1;
+
+$gutter: 24px;
+
+$text_mobile: 19px;
+$text_mobile_small: 10px;
+
+$navigation_height: 32px;
+$logo_width: 50%;
+$bottom_triangle: 30px;
+
+$font_black: #000;
+$font_white: #fff;
+$background_color: #001820;
+
+$white: #fff;
