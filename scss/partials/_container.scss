@@ -1,26 +1,44 @@
-.container{
-
+.container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: $full_window;
   padding-bottom: 2*$bottom_triangle;
   background:
     linear-gradient(
-      rgba( 0, 0, 0, .4),
-      rgba( 0, 0, 0, .4)
+      $black_overlay_dark,
+      $black_overlay_dark
     ),
     url(/images/bg_image.jpg)
-    61% 40% / 370%
+    61% 43% / 370%
     no-repeat
     fixed;
   font-family: 'Raleway', 'Open Sans', sans-serif;
   font-weight: 200;
-  color: $font_white;
+  color: $white;
 
-  &__inner{
+  @include mQ('tablet') {
+    background:
+      linear-gradient(
+        $black_overlay_light,
+        $black_overlay_light
+      ),
+      url(/images/bg_image.jpg)
+      61% 43% / 370%
+      no-repeat
+      fixed;
+    background-size: 200%;
+    background-position: 65% 35%;
+  }
 
+  &__inner {
     display: flex;
-    padding: 0 $gutter;
+    width: contentWidth('mobile');
+
+    @include mQ('tablet') {
+      width: contentWidth('desktop');
+    }
   }
 }

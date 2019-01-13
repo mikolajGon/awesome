@@ -1,25 +1,41 @@
 //breaking points
 
 $breakpoints: (
-  "mobile":   400px,
-  "tablet":   1024px,
-  "desktop":  1440px
+  "tablet":   500px,
+  "desktop":   900px,
+  "desktop-wide":  1200px
+);
+
+$content_width: (
+  "mobile": 220px,
+  "desktop": 440px,
+  "desktop-wide": 600px
 );
 
 $on_top: 1;
 $on_bot: -1;
 
-$gutter: 24px;
+$gutter: 28px;
+
+$full_window: 100vh;
 
 $text_mobile: 19px;
+$text_mobile_medium: 12px;
 $text_mobile_small: 10px;
 
+$text: 30px;
+$text_medium: 14px;
+$text_small: 12px;
+$text_very_small: 11px;
+
+$normal_line_height: 1.15;
+$medium_line_height: 1.25;
+$large_line_height: 2;
+
 $navigation_height: 32px;
-$logo_width: 50%;
-$bottom_triangle: 30px;
+$logo_width_mobile: 35vw;
+$logo_width: 15vw;
 
-$font_black: #000;
-$font_white: #fff;
-$background_color: #001820;
-
-$white: #fff;
+$bottom_triangle_mobile: 30px;
+$bottom_triangle: 50px;
+$main_icon_size: 20vw;

@@ -1,51 +1,85 @@
-.content{
-
-  flex: 6;
+.content {
+  flex: 7;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 2*$gutter;
 
-  &__main-text{
+  @include mQ('tablet'){
+    flex: 8;
+    justify-content: space-between;
+    color: $white;
+    padding-top: 2 * $gutter;
+  }
 
+  &__main-text {
     text-align: center;
     font-stretch: semi-expanded;
     font-size: $text_mobile;
-    line-height: 1.35;
+    line-height: $medium_line_height;
+
+    @include mQ('desktop'){
+      color: $black;
+      font-size: $text;
+      line-height: $normal_line_height;
+    }
   }
 
-  &__text-bold{
-
+  &__text-bold {
     font-weight: 600;
+
+    @include mQ('tablet'){
+      color: $white;
+    }
   }
 
-  &__support-text{
+  &__icon {
+    width: $main_icon_size;
+    max-width: 90px;
+    height: $main_icon_size;
+    max-height: 90px;
+  }
 
+  &__support-text {
     font-weight: 600;
+    padding: 0 $gutter/2;
     font-size: $text_mobile_small;
     font-family: 'Open Sans', sans-serif;
-    line-height: 2;
+    line-height: $large_line_height;
     text-align: center;
+
+    @include mQ('tablet'){
+      font-size: $text_medium;
+    }
   }
 
-  &__extra-btn{
-
+  &__extra-btn {
     position: absolute;
     bottom: 0;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 $bottom_triangle $bottom_triangle $bottom_triangle;
+    border-width: 0 $bottom_triangle_mobile $bottom_triangle_mobile $bottom_triangle_mobile;
     border-color: transparent transparent $white transparent;
 
-    &:after{
+    @include mQ('desktop') {
+      border-width: 0 $bottom_triangle $bottom_triangle $bottom_triangle;
+    }
 
+    &:after {
       position: absolute;
       content: '+';
-      color: $font_black;
-      font-family: 'Open Sans' sans-serif;
-      font-size: 1.5*$text_mobile;
+      color: $black;
+      font-family: 'Open Sans', sans-serif;
+      font-size: $text;
       transform: translateX(-50%);
+
+      @include mQ('tablet') {
+        top: .45 * $bottom_triangle;
+        content: 'more';
+        text-transform: uppercase;
+        font-size: $text_very_small;
+        font-weight: 200;
+      }
     }
   }
 }

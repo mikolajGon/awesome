@@ -1,0 +1,8 @@
+@function contentWidth($key) {
+  @if map-has-key($content_width, $key) {
+    @return map-get($content_width, $key);
+  }
+
+  @warn "Unknown `#{$key}` in content_width.";
+  @return null;
+}

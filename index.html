@@ -49,11 +49,83 @@
           </g>
         </g>
       </svg>
-      <ul class="navigation__list">
-        <li class="navigation__list-item">features</li>
-        <li class="navigation__list-item">case studies</li>
-        <li class="navigation__list-item">about</li>
-        <li class="navigation__list-item navigation__list-item--secondary">contact</li>
+      <ul
+        class="navigation__list"
+        id="menu"
+      >
+        <li class="navigation__list-item">
+          <a
+            href="#"
+            class="navigation__item-link"
+            data-menu
+          >
+            features
+            <span class="navigation__item-border">
+              features
+            </span>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            href="#"
+            class="navigation__item-link"
+            data-menu
+          >
+            case studies
+            <span class="navigation__item-border">
+              case studies
+            </span>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            href="#"
+            class="navigation__item-link"
+            data-menu
+          >
+            about
+            <span class="navigation__item-border">
+              about
+            </span>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            href="#"
+            class="navigation__item-link navigation__item-link--secondary"
+          >
+            contact
+          </a>
+        </li>
+        <li class="navigation__list-item navigation__item-link--socials">
+          <a
+            href='#'
+            class="navigation__social-link"
+          >
+            <img
+              src="/images/fb.svg"
+              class="navigation__social-icon"
+            />
+          </a>
+          <a
+            href='#'
+            class="navigation__social-link"
+          >
+            <img
+              src="images/twitter.svg"
+              class="navigation__social-icon"
+            />
+          </a>
+          <a
+            href='#'
+            class="navigation__social-link"
+          >
+            <img
+              src="images/google+.svg"
+              class="navigation__social-icon"
+            />
+          </a>
+        </li>
       </ul>
     </header>
     <article class="container__inner content">
@@ -62,19 +134,10 @@
           Not to make you feel dizzy but the challenge is worth it. Aim high, have fun, <span class="content__text-bold">be awesome.</span>
         </p>
       </section>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="60"
-        height="104"
-      >
-        <image
-          data-name="Vector Smart Object"
-          width="100%"
-          height="100%"
-          xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAQAAAC3FX0qAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBQgSETNpp4KuAAADzUlEQVR42u3bMU/bQBTA8eeqEwkSA8yoU6V+ABhRpYxkjRgzMFRdyNaZCYbuVGKJUIZsKFKnDGRnY0FUDI3EF6hUxACIf4dcIkIc39k5O/eser3z3f1i+/zu+SJSwEHECSdERfRVFAcoCWnCKQdpiqOf9IpzwYV60hRnhRXlpGmOiIhq0ixHNSmeo5Y0n6OSlMxRR7JzVJHcOGpI7hwVpHSc4EnpOUGTsnGCJWXnBEriODsnQNKinMBIPjgBkXxxAiH55ARA8s1ZMikPjh9SppM4lm8iIjKQ3eghseaafJQPUpWqiNzLvfyWX9GfZJL8lM8iIvJDvkb4/LnmchwWCOs06XBH3HFHhybr80mF3ng2DhF1ejxhO57oUY8fcIGkZA4RDa6mhv3CkD5dTjmlS58hL1PlVzTihlwQycL5xODVUG84okZlplaFGkfcvKo54NNSSEkcIlo8mvJn2mxZW9uizbM545HW7KBzJiVyKpxPfu8zNp3b3ORsct55zNXMj5TI2eDSlN6yk7rlHW7N2ZdsFESycK5NaZfVTK2v0jUtXBdCstxs46tzuFAfh5OrlPeNZ5kKxs/OwcL9HEyepTynB8tE3fJxdSatja9SK6bMD8n63hlN1F0fHBER8yw95vReskYFAzOzZZoKYntcNTPeIIfowRqzNUx56ok6sdcd02ojtjQ7ySEEHcVsZz45IiLmVXvlNWy1LxComyDHOSpw7nvTBET1OeXpSU7rnR4Abd8cERHaAPTmlqcjOS7fRusdawiaCbQFwJOXJaBbroAmADd5cEREzOKimVDDjeSa+qADwFFuoCMAOol17CT3TI7JFdRyA9UAuLPUSial4KwB8DIbRnoDVcxCfS0zKU2ejW0AhnlxREQYArBtrRdPSpc2ZA+Afq6gPgB7DjVnSWmzoOz7DUlj+xiFqftOdadI792zoJOjKiIif/MEmdarLlWjB3ZNtvWLyLtch7Wco1y3XAZS8JNCWpKCaTsdScWLNSVJQ+iThqQkOHUnqVk+uJIULfCcSXqW4G4kVUkSF5KyNJYTSVei0U5Slwp2IGlL1juQtH1OsZEUfvCykvR9krSS9H00diBp+6xvJenbeGEl6dsaYyMp3LzkQNK2vcxOUrcB0IUksswtmv830Y5J9quUqd1y7dwu2d76kv37IQCOT1IgHF+kgDg+SIFxFiUFyFmEFCgnKylgThZS4Jy0JAWcNCQlHFeSIo4LSRnHRlLISSIp5cwjKebEkZRz3pJKwHlDGnO+K+ZMkUbH8bLH45dUBs4rUlk4hlQQ5x/IZIjhAKEA4QAAAABJRU5ErkJggg=="
-        />
-      </svg>
+      <img
+        src="images/kolko_kwadrat.svg"
+        class="content__icon"
+      />
       <aside class="content__support-text">
         Look carefully and notice every detail, nothing tricky though.
       </aside>
@@ -85,55 +148,28 @@
       <a
         class="footer__social-link"
         href="#";
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          class="footer__social-icon footer__social-icon--facebook"
-        >
-          <image
-            data-name="Vector Smart Object copy"
-            width="100%"
-            height="100%"
-            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBQgSCDEcqUqaAAAAuElEQVQ4y+2RMQrCQBBF34qNmCJIesHGnEC8hGDpcXIPr5C9gJVtLmCdwt5UQUEYi+zKCrtrFlunWv7Mn/93PlJLStVKhKSapI3D9Ev/QcMNmLMlAyDq+CiFZcp5gGIE7UpZQuwPlRcN7u9Mfy2tC4cVDIEdy7SzZj/m4Eu64QA81RVAcnIALsxCwd1V62zs6EAWw/h4Syv78CkUsgd6dQKQkhLYvLvBHIwtqT7h5Cv9CeMIOmlevwD1aOO/mSfCrwAAAABJRU5ErkJggg=="
-          />
-        </svg>
+      ><img
+        src="images/fb.svg"
+        class="footer__social-icon"
+      />
         / awesome
       </a>
       <a
         class="footer__social-link"
         href="#";
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          class="footer__social-icon footer__social-icon--twitter"
-        >
-          <image
-            data-name="Vector Smart Object copy 3"
-            width="100%"
-            height="100%"
-            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAQAAADr5dYVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBQgSCTUC37/CAAABJUlEQVQoz42SsUtCURTGv2cWPrElaAsH3QJraCoQWoIakmhoUOfoP2gJgra2IIiguWiNsCGMSCgIoiFoaokmiTIcLAp6v4bS3rvvlu83nvt9h++ecySRkBWG2KEOvLDPsEQvRdKSOKBskY/wxC+vHNHkUBIOb8AqPQF5jFtMHlhhTfTxCcAFYz7DBDauGJDEdadQoYArSZQs8ur3m5gLlFvU2GLXYtiQpDj9ymlPxU6apPLKW8f23P5eg2jMS1LM8bStKHiqtSeSoBqh/7F/6imWqXcxzPgNGd67yE/MQ1j8V94kE76dKc5/dm7ywbT9OpOs44XkLQpBWQqXNLNsWvdxQ87sO8npH8nvWSJu5nAkiawWNK5RDcoVetSdLlXRmeOFg38BCMLoAm2YCvcAAAAASUVORK5CYII="
-          />
-        </svg>
+      ><img
+        src="images/twitter.svg"
+        class="footer__social-icon"
+      />
         / awesome
       </a>
       <a
         class="footer__social-link"
         href="#";
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          class="footer__social-icon footer__social-icon--google"
-        >
-          <image
-            data-name="Vector Smart Object copy 4"
-            width="100%"
-            height="100%"
-            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAQAAABtcaS7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBQgSChUSnMzJAAABHUlEQVQoz42TMSxDURSGv1cVEWUwdSQGYZJ0JamkoSsxsZgkEquE1cDIIGKymMRktTGg0pXJILF0k1CSovkM76Xa1z780829/7l/7vnOhUgWPLGivnjpqt38Jgc8tVV3jiTbe7y2XVvJBXuRpeSiOWc9Vo8MkuzDfql6YKqxN2VXzDXohOPhclvV27glVrCsPgKkmAFgJ6jzLwW+kgH6gyqARTaaTp+DOXCNBbKMUuMGUPW9JfpHny1NUTVNlQy9ZsKEmMKLHrhoTiirOh8lZM2bN++Kqvftj05zTg7Y9CyoQ1ChEg4KAFedGjYUcThs4jBtTdViBw7gboP0kjkL7vuhajmBdsIsvTmWzLF9Wp+c/INg4z9ULbluX5LvG5CyIvpPf1M4AAAAAElFTkSuQmCC"
-          />
-        </svg>
+      ><img
+        src="images/google+.svg"
+        class="footer__social-icon"
+      />
         / awesome
       </a>
     </footer>
@@ -142,12 +178,4 @@
 </body>
 
 </html>
-
-<!-- navigation
-
-navigation__list
-
-navigation__list-item
-
-navigation__list-item--secondary -->
 
