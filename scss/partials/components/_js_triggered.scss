@@ -1,0 +1,47 @@
+.active,
+.active:hover {
+
+  &> .navigation{
+
+    &__item-border {
+      width: 110%;
+    }
+
+    &__list-item {
+      transform: translateX(0);
+    }
+  }
+
+  &.navigation{
+
+    &__list {
+      transform: translateY(0);
+      opacity: 1;
+      transition:
+        opacity .3s ease-in,
+        transform .01s ease;
+    }
+
+    &__hamburger {
+
+      .navigation__hamburger-element--2 {
+        transform-origin: 16px 12px;
+        transform: rotate(45deg) translateY(1px);
+      }
+
+      .navigation__hamburger-element--4 {
+        transform-origin: 16px 12px;
+        transform: rotate(135deg) translateY(1px);
+      }
+
+      .navigation__hamburger-element--1,
+      .navigation__hamburger-element--3 {
+        transform: translateX(-200%);
+      }
+    }
+  }
+}
+
+.rotate{
+  transform: rotate(360deg);
+}

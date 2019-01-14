@@ -4,11 +4,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mQ('tablet'){
-    font-size: $text;
+  @include mQ('tablet') {
+  justify-content: space-around;
+    font-size: $text_large;
   }
 
-  @include mQ('desktop') {
+  @include mQ('tablet') {
     flex: 1;
     flex-direction: row;
   }
@@ -24,6 +25,10 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 
+    @include mQ('desktop-wide') {
+      padding-left: 1.5 * $gutter;
+      font-size: $text;
+    }
 
     &:visited {
       color: $white;
@@ -35,12 +40,14 @@
     top: 50%;
     left: 0;
     width: 16px;
-    height: 16px;
     transform: translateY(-50%);
 
     @include mQ('desktop') {
       width: 19px;
-      height: 19px;
+    }
+
+    @include mQ('desktop-wide') {
+      width: 24px;
     }
   }
 }

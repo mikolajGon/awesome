@@ -38,14 +38,42 @@
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 32 22"
+        viewBox="0 0 32 32"
+        id="hamburger"
         class="navigation__hamburger"
       >
         <g id="Layer_2" data-name="Layer 2">
           <g id="Layer_1-2" data-name="Layer 1">
-            <rect class="navigation__hamburger-element" width="32" height="4" rx="2" ry="2" />
-            <rect class="navigation__hamburger-element" y="9" width="32" height="4" rx="2" ry="2" />
-            <rect class="navigation__hamburger-element" y="18" width="32" height="4" rx="2" ry="2" />
+            <rect
+              class="navigation__hamburger-element navigation__hamburger-element--1"
+              width="32"
+              height="4"
+              rx="2"
+              ry="2"
+            />
+            <rect
+              class="navigation__hamburger-element navigation__hamburger-element--2"
+              y="9"
+              width="32"
+              height="4"
+              rx="2"
+              ry="2"
+            /><rect
+              class="navigation__hamburger-element navigation__hamburger-element--3"
+              y="18"
+              width="32"
+              height="4"
+              rx="2"
+              ry="2"
+            />
+            <rect
+              class="navigation__hamburger-element navigation__hamburger-element--4"
+              y="9"
+              width="32"
+              height="4"
+              rx="2"
+              ry="2"
+            />
           </g>
         </g>
       </svg>
@@ -103,7 +131,7 @@
             class="navigation__social-link"
           >
             <img
-              src="/images/fb.svg"
+              src="./images/fb.png"
               class="navigation__social-icon"
             />
           </a>
@@ -112,7 +140,7 @@
             class="navigation__social-link"
           >
             <img
-              src="images/twitter.svg"
+              src="./images/twitter.png"
               class="navigation__social-icon"
             />
           </a>
@@ -121,7 +149,7 @@
             class="navigation__social-link"
           >
             <img
-              src="images/google+.svg"
+              src="./images/google+.png"
               class="navigation__social-icon"
             />
           </a>
@@ -131,12 +159,14 @@
     <article class="container__inner content">
       <section>
         <p class="content__main-text">
-          Not to make you feel dizzy but the challenge is worth it. Aim high, have fun, <span class="content__text-bold">be awesome.</span>
+          Not to make you feel dizzy but the challenge is worth it. Aim high, have fun,
+          <span class="content__text-bold">be awesome.</span>
         </p>
       </section>
       <img
-        src="images/kolko_kwadrat.svg"
+        src="./images/kolko_kwadrat.png"
         class="content__icon"
+        id="content_icon"
       />
       <aside class="content__support-text">
         Look carefully and notice every detail, nothing tricky though.
@@ -148,33 +178,38 @@
       <a
         class="footer__social-link"
         href="#";
-      ><img
-        src="images/fb.svg"
-        class="footer__social-icon"
-      />
+      >
+        <img
+          src="./images/fb.png"
+          class="footer__social-icon"
+        />
         / awesome
       </a>
       <a
         class="footer__social-link"
         href="#";
-      ><img
-        src="images/twitter.svg"
-        class="footer__social-icon"
-      />
+      >
+        <img
+          src="./images/twitter.png"
+          class="footer__social-icon"
+        />
         / awesome
       </a>
       <a
         class="footer__social-link"
         href="#";
-      ><img
-        src="images/google+.svg"
-        class="footer__social-icon"
-      />
+      >
+        <img
+          src="./images/google+.png"
+          class="footer__social-icon"
+        />
         / awesome
       </a>
     </footer>
   </div>
+  <!-- build:js -->
   <script src="js/main.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>

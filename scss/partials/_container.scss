@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   height: $full_window;
-  padding-bottom: 2*$bottom_triangle;
+  padding-bottom: 2*$bottom_triangle_mobile;
   background:
     linear-gradient(
       $black_overlay_dark,
       $black_overlay_dark
     ),
-    url(/images/bg_image.jpg)
+    url(../images/bg_image.jpg)
     61% 43% / 370%
     no-repeat
     fixed;
@@ -20,25 +20,37 @@
   color: $white;
 
   @include mQ('tablet') {
+    padding-bottom: 2*$bottom_triangle;
     background:
       linear-gradient(
         $black_overlay_light,
         $black_overlay_light
       ),
-      url(/images/bg_image.jpg)
-      61% 43% / 370%
+      url(../images/bg_image.jpg)
+      65% 35% / 200%
       no-repeat
       fixed;
-    background-size: 200%;
-    background-position: 65% 35%;
+  }
+
+  @include mQ('desktop-wide') {
+    background-size: 170%;
+    background-position: 70% 30%;
   }
 
   &__inner {
     display: flex;
     width: contentWidth('mobile');
 
+    @include mQ('mobile-wide') {
+      width: contentWidth('mobile-wide');
+    }
+
     @include mQ('tablet') {
       width: contentWidth('desktop');
+    }
+
+    @include mQ('desktop-wide') {
+      width: contentWidth('desktop-wide');
     }
   }
 }

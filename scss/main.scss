@@ -2,12 +2,15 @@
 
 @import './partials/normalize';
 @import './partials/reset';
-// Main styles
+
+// Helpers
 
 @import './partials/variables';
 @import './partials/colors';
 @import './partials/functions';
 @import './partials/mixins';
+
+// Main containers
 @import './partials/container';
 
 // Components styles
@@ -15,3 +18,8 @@
 @import './partials/components/navigation';
 @import './partials/components/footer';
 @import './partials/components/content';
+
+// JS triggered component actions
+
+@import './partials/components/js_triggered';
+

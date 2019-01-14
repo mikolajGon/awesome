@@ -6,8 +6,6 @@ var
   gulpSourcemaps = require('gulp-sourcemaps'),
   del = require('del');
 
-
-
 gulp.task('compileSass', function () {
   return gulp.src('scss/main.scss')
     .pipe(gulpSourcemaps.init())
@@ -27,12 +25,4 @@ gulp.task('clean', function (done) {
 
 gulp.task('serve', gulp.series('watchFiles'));
 
-gulp.task('build', gulp.series('compileSass', function () {
-  return gulp.src(['css/main.css', 'index.html', 'img/**'], { base: './' })
-    .pipe(gulp.dest('build'));
-}));
-
-gulp.task('default', gulp.series('clean', function (done) {
-  gulp.start('build');
-  done();
-}));
+gulp.task('default', gulp.series('clean', 'compileSass'));

@@ -1,26 +1,38 @@
 .content {
-  flex: 7;
+  flex: 8;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 
-  @include mQ('tablet'){
+  @include mQ('tablet') {
     flex: 8;
     justify-content: space-between;
     color: $white;
     padding-top: 2 * $gutter;
   }
 
+  @include mQ('desktop-wide') {
+    padding-top: 3 * $gutter;
+  }
+
   &__main-text {
     text-align: center;
     font-stretch: semi-expanded;
-    font-size: $text_mobile;
+    font-size: $text_mobile_large;
     line-height: $medium_line_height;
 
-    @include mQ('desktop'){
+    @include mQ('mobile-wide') {
+      font-size: $text_large;
+    }
+
+    @include mQ('desktop') {
       color: $black;
-      font-size: $text;
       line-height: $normal_line_height;
+    }
+
+    @include mQ('desktop-wide') {
+      line-height: $medium_line_height;
+      font-size: $text_Xlarge;
     }
   }
 
@@ -37,18 +49,33 @@
     max-width: 90px;
     height: $main_icon_size;
     max-height: 90px;
+    cursor: pointer;
+    transition: transform .4s ease-out;
+
+    @include mQ('desktop-wide') {
+      max-width: 104px;
+      max-height: 104px;
+    }
   }
 
   &__support-text {
-    font-weight: 600;
     padding: 0 $gutter/2;
+    font-weight: 600;
     font-size: $text_mobile_small;
     font-family: 'Open Sans', sans-serif;
     line-height: $large_line_height;
     text-align: center;
 
-    @include mQ('tablet'){
+    @include mQ('mobile-wide') {
+      font-size: $text_small;
+    }
+
+    @include mQ('tablet') {
       font-size: $text_medium;
+    }
+
+    @include mQ('desktop-wide') {
+      font-size: $text_Slarge;
     }
   }
 
@@ -65,20 +92,30 @@
       border-width: 0 $bottom_triangle $bottom_triangle $bottom_triangle;
     }
 
+    @include mQ('desktop-wide') {
+      border-width: 0 1.2 * $bottom_triangle 1.2 * $bottom_triangle 1.2 * $bottom_triangle;
+    }
+
     &:after {
       position: absolute;
+      top: .25 * $bottom_triangle_mobile;
       content: '+';
       color: $black;
       font-family: 'Open Sans', sans-serif;
       font-size: $text;
       transform: translateX(-50%);
 
-      @include mQ('tablet') {
+      @include mQ('desktop') {
         top: .45 * $bottom_triangle;
         content: 'more';
         text-transform: uppercase;
         font-size: $text_very_small;
         font-weight: 200;
+      }
+
+      @include mQ('desktop-wide') {
+        top: .60 * $bottom_triangle;
+        font-size: $text_medium;
       }
     }
   }

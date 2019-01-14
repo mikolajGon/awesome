@@ -1,36 +1,53 @@
-//breaking points
+//Breaking points and content width
 
 $breakpoints: (
-  "tablet":   500px,
+  "mobile-wide": 400px,
+  "tablet":   600px,
   "desktop":   900px,
   "desktop-wide":  1200px
 );
 
 $content_width: (
   "mobile": 220px,
+  "mobile-wide": 350px,
   "desktop": 440px,
-  "desktop-wide": 600px
+  "desktop-wide": 560px
 );
+
+// Z-index control
 
 $on_top: 1;
 $on_bot: -1;
 
+// Basic Gutter
+
 $gutter: 28px;
+
+
 
 $full_window: 100vh;
 
-$text_mobile: 19px;
+// Font sizes
+
+$text_mobile_large: 19px;
 $text_mobile_medium: 12px;
 $text_mobile_small: 10px;
 
-$text: 30px;
+$text_Xlarge: 36px;
+$text_large: 30px;
+$text_Slarge: 18px;
+$text: 16px;
 $text_medium: 14px;
 $text_small: 12px;
 $text_very_small: 11px;
 
+// Line heights
+
 $normal_line_height: 1.15;
 $medium_line_height: 1.25;
-$large_line_height: 2;
+$large_line_height: 1.8;
+
+// Elements sizes
 
 $navigation_height: 32px;
 $logo_width_mobile: 35vw;

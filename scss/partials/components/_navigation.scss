@@ -1,10 +1,10 @@
-.navigation{
+.navigation {
   display: flex;
   position: relative;
   z-index: $on_top;
-  padding: $gutter 0;
+  padding: $gutter 0 0;
   width: 100%;
-  height: $navigation_height + 2 * $gutter;
+  height: $navigation_height + $gutter;
   justify-content: space-between;
 
   @include mQ('desktop') {
@@ -14,7 +14,7 @@
     padding: 1.5 * $gutter 2 * $gutter;
   }
 
-  &__logo{
+  &__logo {
     position: absolute;
     z-index: $on_top;
     left: 50%;
@@ -42,6 +42,7 @@
     z-index: $on_top;
     right: $gutter;
     width: $navigation_height;
+    cursor: pointer;
 
     @include mQ('desktop') {
       display: none;
@@ -50,6 +51,7 @@
 
   &__hamburger-element {
     fill: $white;
+    transition: all .4s ease-out .1s;
   }
 
   &__list {
@@ -57,14 +59,27 @@
     top: 0;
     display: flex;
     flex-direction: column;
-    // overflow: hidden;
-    height: 100vh;
+    height: $full_window;
     width: 100%;
     padding: 0 2 * $gutter;
     padding-top: $navigation_height + $gutter;
     padding-bottom: $gutter;
-    background-color: $dark_blue;
+    opacity: 0;
     transform: translateY(-100%);
+    background-color: $dark_blue;
+    transition:
+      opacity .3s ease-in,
+      transform .01s ease 1s;
+
+    @include mQ('mobile-wide') {
+      padding-left: 30%;
+      padding-right: 30%;
+    }
+
+    @include mQ('tablet') {
+      padding-left: 35%;
+      padding-right: 35%;
+    }
 
     @include mQ('desktop') {
       position: static;
@@ -72,6 +87,7 @@
       height: auto;
       width: initial;
       padding: 0;
+      opacity: 1;
       background-color: transparent;
       transform: none;
     }
@@ -82,10 +98,13 @@
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
+    transform: translateX(-350%);
+    transition: transform .4s ease-in-out .3s;
 
     @include mQ('desktop') {
-      flex-grow: initial;
       display: block;
+      flex-grow: initial;
+      transform: translateX(0);
     }
   }
 
@@ -105,8 +124,14 @@
       font-weight: 600;
     }
 
-    &:hover{
-      .navigation__item-border{
+    @include mQ('desktop-wide') {
+      font-size: $text;
+      font-weight: 600;
+    }
+
+    &:hover {
+
+      .navigation__item-border {
         width: 50%;
       }
     }
@@ -144,10 +169,13 @@
     border-radius: 1px;
     width: 0%;
     transition: width .3s cubic-bezier(0.075, 0.82, 0.165, 1) .15s;
+
+    @include mQ('desktop-wide') {
+      height: 3px;
+    }
   }
 
   &__social-icon {
     width: 24px;
-    height: 24px;
   }
 }
