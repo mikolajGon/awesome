@@ -96,14 +96,21 @@
   &__list-item {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transform: translateX(-350%);
     transition: transform .4s ease-in-out .3s;
 
+    @include mQ('mobile-wide') {
+      flex: initial;
+      margin: $gutter 0;
+    }
+
     @include mQ('desktop') {
       display: block;
       flex-grow: initial;
+      flex: initial;
+      margin:0;
       transform: translateX(0);
     }
   }
@@ -111,14 +118,12 @@
   &__item-link {
     display: inline-block;
     position: relative;
-    flex: 1 1 100%;
     padding: $gutter/3 0;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
 
     @include mQ('desktop') {
-      flex: initial;
       margin: 0 $gutter;
       font-size: $text_small;
       font-weight: 600;
@@ -137,6 +142,7 @@
     }
 
     &--secondary {
+      padding: $gutter/3 $gutter;
       border-radius: 5px;
       border: 3px solid $white;
 
@@ -152,6 +158,7 @@
     }
 
     &--socials {
+      justify-content: space-between;
 
       @include mQ('desktop') {
         display: none;
@@ -169,6 +176,7 @@
     border-radius: 1px;
     width: 0%;
     transition: width .3s cubic-bezier(0.075, 0.82, 0.165, 1) .15s;
+    box-sizing: content-box;
 
     @include mQ('desktop-wide') {
       height: 3px;

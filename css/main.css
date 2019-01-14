@@ -439,26 +439,30 @@ a:focus {
   .navigation__list-item {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transform: translateX(-350%);
     transition: transform .4s ease-in-out .3s; }
+    @media only screen and (min-width: 400px) {
+      .navigation__list-item {
+        flex: initial;
+        margin: 28px 0; } }
     @media only screen and (min-width: 900px) {
       .navigation__list-item {
         display: block;
         flex-grow: initial;
+        flex: initial;
+        margin: 0;
         transform: translateX(0); } }
   .navigation__item-link {
     display: inline-block;
     position: relative;
-    flex: 1 1 100%;
     padding: 9.33333px 0;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600; }
     @media only screen and (min-width: 900px) {
       .navigation__item-link {
-        flex: initial;
         margin: 0 28px;
         font-size: 12px;
         font-weight: 600; } }
@@ -469,6 +473,7 @@ a:focus {
     .navigation__item-link:hover .navigation__item-border {
       width: 50%; }
     .navigation__item-link--secondary {
+      padding: 9.33333px 28px;
       border-radius: 5px;
       border: 3px solid #fff; }
       @media only screen and (min-width: 900px) {
@@ -478,9 +483,11 @@ a:focus {
         background-color: #fff;
         color: #001820;
         font-weight: 600; }
-    @media only screen and (min-width: 900px) {
-      .navigation__item-link--socials {
-        display: none; } }
+    .navigation__item-link--socials {
+      justify-content: space-between; }
+      @media only screen and (min-width: 900px) {
+        .navigation__item-link--socials {
+          display: none; } }
   .navigation__item-border {
     position: absolute;
     overflow: hidden;
@@ -490,7 +497,8 @@ a:focus {
     background-color: #fff;
     border-radius: 1px;
     width: 0%;
-    transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.15s; }
+    transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.15s;
+    box-sizing: content-box; }
     @media only screen and (min-width: 1200px) {
       .navigation__item-border {
         height: 3px; } }
@@ -637,7 +645,7 @@ a:focus {
 
 .active > .navigation__item-border,
 .active:hover > .navigation__item-border {
-  width: 110%; }
+  width: 105%; }
 
 .active > .navigation__list-item,
 .active:hover > .navigation__list-item {
