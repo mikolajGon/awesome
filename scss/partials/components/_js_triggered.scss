@@ -1,7 +1,7 @@
 .active,
 .active:hover {
 
-  &> .navigation{
+  &> .navigation {
 
     &__item-border {
       width: 105%;
@@ -12,7 +12,7 @@
     }
   }
 
-  &.navigation{
+  &.navigation {
 
     &__list {
       transform: translateY(0);
@@ -42,6 +42,6 @@
   }
 }
 
-.rotate{
+.rotate {
   transform: rotate(360deg);
 }
